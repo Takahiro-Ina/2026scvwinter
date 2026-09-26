@@ -189,6 +189,42 @@ li::marker { color: var(--muted); }
 .info-card dd { margin: 0; }
 
 /* 講演情報が確定した後も同じ紙面で表示する。 */
+.schedule-table-wrap {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.schedule-table-wrap:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: .875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule-table th,
+.schedule-table td {
+  height: 3.25rem;
+  padding: .75rem .6rem;
+  border: 1px solid var(--line);
+  text-align: center;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.schedule-table thead th {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.schedule-table tbody th { font-weight: 500; }
+
 .schedule-day { margin-bottom: 1.75rem; }
 .schedule-day h3 { margin-top: 0; }
 .talks { margin: 0; padding: 0; list-style: none; }
